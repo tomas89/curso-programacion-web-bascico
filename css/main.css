@@ -1184,8 +1184,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     line-height: 1.2;
 }
 
+.menu{
+    display: none;
+}
+
 
 @media (max-width: 1200px){
+    .menu{
+        display: block;
+    }
+
     .right-nav ,  .left-nav {
             display: none;
     }
