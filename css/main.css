@@ -40,6 +40,7 @@ input, button, select, optgroup, textarea{
     justify-content: space-between;
     margin: 20px 31px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .main-container > header > a{
@@ -798,12 +799,36 @@ input, button, select, optgroup, textarea{
 
 .main-container > .seccion8 > .testimonios-clientes > .inner > .carousel-item{
     position: relative;
-    display: none;
-    float: left;
+    /*display: none;*/
+    /*float: left;*/
     width: 100%;
     margin-right: -100%;
     backface-visibility: hidden;
     transition: transform .6s ease-in-out;
+}
+
+
+#dots-wrapper{
+    display: flex;
+    position: absolute;
+    bottom: 3px;
+}
+
+.doNav{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 0px 8px;
+    border: 2px solid #d6d6d6;
+}
+
+.doNav:hover{
+    background-color: #d6d6d6;
+}
+
+.active-dot{
+    background-color: #d6d6d6;
 }
 
 .main-container > .seccion8 > .testimonios-clientes > .inner > .carousel-item .single-testimonial{
@@ -1185,6 +1210,22 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     line-height: 1.2;
 }
 
+header .shop{
+    order:4;
+    display: flex; 
+    align-items: center;
+}
+
+header .menu{
+    order: 6;
+    border-left: 1px solid rgba(0,0,0,0.15);
+    padding-left: 20px;
+    height: 30px;
+    line-height: 28px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 .menu{
     display: none;
 }
@@ -1197,6 +1238,54 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 
     .right-nav ,  .left-nav {
             display: none;
+    }
+
+    .main-container > header > .right-nav > ul  > li .sub-menu{
+        position: relative;
+        width: 100%;
+    }
+
+    
+    .main-container header .header-logo-link{
+        order: -1;   
+    }
+
+    .main-container > header > .left-nav{
+        flex-basis: 100%;
+        order: 2;
+    }
+
+    .main-container > header > .right-nav >ul{
+        display: block;
+    }
+
+    .main-container > header > .right-nav >ul > li, .main-container > header > .left-nav >ul > li {
+        padding:  15px 0 ;
+        text-align: center;
+    }
+
+    .mostrar{
+        display: block;
+    }
+    .ocultar{
+        display: none;
+    }
+
+    .main-container > header > .left-nav >ul{
+        display: block;
+    }
+
+    .main-container > header > .right-nav {
+        order: 2;
+        width: 100%;
+    }
+    
+    .main-container header .shop{
+        order: -1!important;
+    }
+
+    .main-container header .menu{
+        order: 0!important;
     }
 
     .main-container > section > .dos > img, .main-container > .tres .right-content img{

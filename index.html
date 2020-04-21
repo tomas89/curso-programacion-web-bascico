@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/fontawesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
   <title>Proyecto web 1</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
                                   <img class="header-logo logo-mobile" style=" width: 100%;max-width: 200px; display: none; " src="https://www.modulosdesk.com/wp-content/uploads/2019/03/Modulos_icon-positive-web.svg" alt="Modulos Furniture Systems" />
                                 </a>
 
-                                <div class="left-nav">
+                                <div class="left-nav" id="navleft" >
                                     <ul>
                                         <li><a href="">About Modulos</a></li>
                                         <li><a href="">Materials</a></li>
@@ -31,10 +32,10 @@
                                     </ul>
                                 </div>
 
-                                <div class="right-nav">
+                                <div class="right-nav" id="navright">
                                    <ul>
                                         <li> <a href="#">Create your Desk</a></li>
-                                        <li> <a href="#uno" class="arrow"  onclick="mostrar_ocultar()" >Shop</a>   
+                                        <li> <a href="#uno" class="arrow" id="shop" >Shop</a>   
                                               <ul class="sub-menu" id="menu" >
                                                   <li> <a href="" >Desk Configuration</a> </li>
                                                   <li> <a href="">Modules</a> </li>
@@ -43,13 +44,13 @@
                                         </li>
                                     </ul>
                                  </div>
-                                 <div style="order: 4; display: flex; align-items: center;">
+                                 <div style="order: 4; display: flex; align-items: center;" class="shop">
                                     <li style="list-style: none; font-size: 35px;position: relative; color: rgba(0,0,0,0.15);bottom: 2px;display: inline-block;margin: 0 17px; ">|</li>
                                     <a href="#"><span class="material-icons" style=" color: rgba(1,1,1,1.15);">shopping_cart</span> </a> 
                                  </div>
-                                 <div class="menu" style="order: 6; border-left: 1px  solid rgba(0,0,0,0.15) ; padding-left: 20px;height: 30px;
+                                 <div class="menu" id="menuHam" style="order: 6; border-left: 1px  solid rgba(0,0,0,0.15) ; padding-left: 20px;height: 30px;
                                  line-height: 28px;font-size: 30px; cursor: pointer;">
-                                    <i class="fas fa-align-justify"></i>
+                                    <i id="iconM" class="fas fa-align-justify"></i>
                                  </div>
                                      
                              
@@ -412,15 +413,15 @@
 
             <section class="seccion8">
                 <div id="testimonios" class="testimonios-clientes contenedor carousel slide">
-                    <a href="#Carousel" class="customer-testimonials" role="button" data-slide="prev">
+                    <a href="#Carousel" class="customer-testimonials" role="button" data-slide="prev" id="arrow-prev">
                       <span class="material-icons">
                         keyboard_arrow_left
                         </span>
                     </a>
-                    <div class="inner">
-                        <div class=" carousel-item">
+                    <div class="inner" id="slider-container">
+                        <div class=" carousel-item slide fade" id="slide-0">
                           <div class="single-testimonial">
-                            <img src="https://www.modulosdesk.com/wp-content/uploads/2019/03/dino.jpg" alt="Customer's Modulos configuration" role="presentation">
+                            <img src="https://www.modulosdesk.com/wp-content/uploads/2019/03/dino.jpg" alt="img 0" role="presentation">
                             <div class="contenido-t">
                               <p>
                                 Best work desk ever. Except for the perfect design and quality wood, it keeps me organized - especially those endless cables. It was fun putting it all together, and have endless possibilities in customization of my work surface. Thank you Modulos!              </p>
@@ -430,9 +431,9 @@
                             </div>
                           </div>
                         </div>
-                          <div class=" carousel-item active">
+                          <div class=" carousel-item slide fade" id="slide-1">
                               <div class="single-testimonial">
-                                <img src="https://www.modulosdesk.com/wp-content/uploads/2019/04/dennis-cox.jpg" alt="Customer's Modulos configuration" role="presentation">
+                                <img src="https://www.modulosdesk.com/wp-content/uploads/2019/04/dennis-cox.jpg" alt="img 1" role="presentation">
                                 <div class="contenido-t">
                                   <p>
                                     Well my Modulos arrived today - and it looks FANTASTIC! Everything was packed perfectly and arrived in good order. I do have one major issue - it's kind of a big deal. I don't have enough modules!!! I ordered 12 - looks like I need to order more :)Seriously though - better than I could have hoped - well done.              </p>
@@ -442,9 +443,9 @@
                                 </div>
                               </div>
                          </div>
-                          <div class=" carousel-item">
+                          <div class=" carousel-item slide fade" id="slide-2">
                               <div class="single-testimonial">
-                                <img src="https://www.modulosdesk.com/wp-content/uploads/2019/04/arjen1.jpg" alt="Customer's Modulos configuration" role="presentation">
+                                <img src="https://www.modulosdesk.com/wp-content/uploads/2019/04/arjen1.jpg" alt="img 3" role="presentation">
                                 <div class="contenido-t">
                                   <p>
                                     Thank you for your awesome product. I recieved it today and i wasted no time assembling it. What i need now is to disassemble my old desk and move my stuff over :)  I am very happy with the end product :) The quality finish is a joy to rest my arms on, and the height is just perfect for me.              </p>
@@ -454,9 +455,9 @@
                                 </div>
                               </div>
                            </div>
-                            <div class="carousel-item">
+                            <div class=" carousel-item slide fade" id="slide-3" >
                               <div class="single-testimonial">
-                                <img src="https://www.modulosdesk.com/wp-content/uploads/2019/04/mensur1.jpg" alt="Customer's Modulos configuration" role="presentation">
+                                <img src="https://www.modulosdesk.com/wp-content/uploads/2019/04/mensur1.jpg" alt="img 4" role="presentation">
                                 <div class="contenido-t">
                                   <p>
                                     Top quality modular desks and good service! Had a problem with delivery but they were really professional and solved difficulties within a day! Keep up the good work!              </p>
@@ -467,8 +468,13 @@
                               </div>
                             </div>
                       </div>
-                    <a href="#customerTestimonialsCarousel" class="customer-testimonials__slider-control-container" role="button" data-slide="next">
-                      <span class="material-icons">
+                    <div id="dots-wrapper" class="center_x">
+                        <div class="doNav"></div>
+                        <div class="doNav"></div>
+                        <div class="doNav"></div>
+                    </div>
+                    <a href="#customerTestimonialsCarousel" class="customer-testimonials__slider-control-container" role="button" data-slide="next" id="arrow-next" >
+                      <span class="material-icons" >
                         keyboard_arrow_right
                         </span>                        
                     </a>
