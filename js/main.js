@@ -24,7 +24,7 @@ function mostrar_ocultar(){
 
 function load (){
     var el = document.getElementById("t");
-    el.addEventListener("click", function(){mostrar_ocultar("four")}, false);  
+    el.addEventListener("click", mostrar_ocultar(), false);  
 }
 
 
