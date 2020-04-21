@@ -68,6 +68,7 @@ input, button, select, optgroup, textarea{
     margin: 10px 0px;
     padding: 19px 1px;
     background-color: #fff; 
+    display: none;
 }
 
 
