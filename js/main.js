@@ -1,8 +1,11 @@
 console.log("Este es el proyecto");
+document.addEventListener('DOMContentLoaded', function() {
+    var el = document.getElementById("shop");
+    el.addEventListener("click", mostrar_ocultar, false);  
+});
 
 function mostrar(){
     document.getElementById('menu').style.display = 'block';
-
 }
 
 function ocultar(){
@@ -11,9 +14,8 @@ function ocultar(){
 
 
 function mostrar_ocultar(){
-
+    console.log('mostrar ocultar')
     var caja = document.getElementById("menu");
-
     if(caja.style.display == "none"){
         mostrar();
     }else{
@@ -21,11 +23,6 @@ function mostrar_ocultar(){
     }
 }
 
-
-function load (){
-    var el = document.getElementById("t");
-    el.addEventListener("click", function(){mostrar_ocultar("four")}, false);  
-}
 
 
 
